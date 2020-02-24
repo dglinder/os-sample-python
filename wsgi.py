@@ -9,8 +9,8 @@ def hello():
 
 @application.route("/color")
 def color():
-    uuid = uuid.uuid4().hex
-    return "The color is: {}".format(uuid)
+    myuuid = uuid.uuid4().hex
+    return "The color is: {}".format(myuuid)
 
 if __name__ == "__main__":
     application.run()
