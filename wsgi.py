@@ -10,7 +10,12 @@ def hello():
 @application.route("/color")
 def color():
     myuuid = uuid.uuid4().hex
-    return "The color is: {}".format(myuuid)
+    random.seed(myuuid)
+    red = random.randrange(0,255)
+    green = random.randrange(0,255)
+    blue = random.randrange(0,255)
+    mycolor = ("#{}{}{}".format(hex(red).replace("0x",""),hex(green).replace("0x",""),hex(blue).replace("0x","")))
+    return "The color is: {}".format(mycolor)
 
 if __name__ == "__main__":
     application.run()
