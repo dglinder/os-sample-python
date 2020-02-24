@@ -1,6 +1,8 @@
 from flask import Flask
 application = Flask(__name__)
 
+import uuid
+
 @application.route("/")
 def hello():
     return "Hello World 001!"
