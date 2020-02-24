@@ -6,8 +6,7 @@ import uuid
 
 @application.route("/")
 def hello():
-    return "Hello World 001!
-    <A href='/color'>Click here</A>"
+    return "Hello World 001! <A href='/color'>Click here</A>"
 
 @application.route("/color")
 def color():
